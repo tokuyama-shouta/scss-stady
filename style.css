@@ -1,7 +1,23 @@
-.nav {
-  padding: 10px;
+.button a {
+  color: red;
 }
 
-.nav a {
-  color: #0bd;
+.button:hover {
+  background: #fff;
+}
+
+.button.md {
+  margin-bottom: 10px;
+}
+
+.post {
+  margin-bottom: 20px;
+}
+
+.post-title {
+  font-size: 2rem;
+}
+
+.post-date {
+  color: #ccc;
 }

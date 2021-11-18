@@ -1,8 +1,25 @@
-$main-color: #0bd;
 
-.nav{
-  padding:10px;
+
+.button {
   a{
-    color: $main-color;
+    color:red;
+  }
+  // &を使って親セレクターを参照する
+  &:hover{
+    background: #fff;
+  }
+  &.md{
+    margin-bottom: 10px;
+  }
+}
+
+//クラスめいをネストする
+.post{
+  margin-bottom: 20px;
+  &-title{
+    font-size: 2rem;
+  }
+  &-date{
+    color:#ccc;
   }
 }
