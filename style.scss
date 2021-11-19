@@ -1,25 +1,67 @@
 
 
-.button {
-  a{
-    color:red;
-  }
-  // &を使って親セレクターを参照する
-  &:hover{
-    background: #fff;
-  }
-  &.md{
-    margin-bottom: 10px;
+// .button {
+//   a{
+//     color:red;
+//   }
+//   // &を使って親セレクターを参照する
+//   &:hover{
+//     background: #fff;
+//   }
+//   &.md{
+//     margin-bottom: 10px;
+//   }
+// }
+
+// //クラスめいをネストする
+// .post{
+//   margin-bottom: 20px;
+//   &-title{
+//     font-size: 2rem;
+//   }
+//   &-date{
+//     color:#ccc;
+//   }
+// }
+
+//引数を使う
+// @mixin circle($size:80px,$bg:#0bd) {
+//   width: $size;
+//   height: $size;
+//   border-radius: 50%;
+//   background: $bg;
+// }
+
+// div {
+//   @include circle;
+// }
+
+// .photo{
+//   @include circle(100px,#ccc);
+// }
+
+//グラデーションカラー
+// @mixin gradient-color($color1:#4de1ec,$color2:#b473bf) {
+//   background: liner-gradient($color1,$color2);
+// }
+
+// .box{
+//   @include gradient-color(#ff9f67,#ffd673 )
+// }
+// .title{
+//   @include gradient-color;
+// }
+
+//プロパティーも含めたブロックごと引き渡す
+@mixin desktop {
+  @media(min-width:600px){
+    @content;
   }
 }
 
-//クラスめいをネストする
-.post{
-  margin-bottom: 20px;
-  &-title{
-    font-size: 2rem;
-  }
-  &-date{
-    color:#ccc;
+h1{
+  font-size: 2rem;
+  @include desktop {
+    font-size: 5rem;
   }
 }

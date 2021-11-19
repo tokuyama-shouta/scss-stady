@@ -1,1 +1,1 @@
-.button a{color:red}.button:hover{background:#fff}.button.md{margin-bottom:10px}.post{margin-bottom:20px}.post-title{font-size:2rem}.post-date{color:#ccc}
+h1{font-size:2rem}@media (min-width: 600px){h1{font-size:5rem}}
